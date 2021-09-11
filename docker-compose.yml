@@ -18,10 +18,10 @@ services:
     networks:
     - springcustom
     volumes:
-    - Docker_Compose_EBS
+    - Docker_Production
 networks:
   springcustom:
     driver: bridge
 volumes:
-  Docker_Compose_EBS:
+  Docker_Production:
     driver: rexray/ebs:latest

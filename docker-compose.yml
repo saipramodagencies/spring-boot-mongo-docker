@@ -1,0 +1,27 @@
+version: "3"
+services:
+  springapp:
+    image: buntydocker96/springboot:1
+    ports:
+    - 9090:8080
+    environment:
+    - MONGO_DB_HOSTNAME=mongo
+    - MONGO_DB_USERNAME=sai
+    - MONGO_DB_PASSWORD=sai@123
+    networks:
+    - springcustom
+  mongo:
+    image: mongo
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=sai
+    - MONGO_INITDB_ROOT_PASSWORD=sai@123
+    networks:
+    - springcustom
+    volumes:
+    - Docker_Compose_EBS
+networks:
+  springcustom:
+    driver: bridge
+volumes:
+  Docker_Compose_EBS:
+    driver: rexray/ebs:latest

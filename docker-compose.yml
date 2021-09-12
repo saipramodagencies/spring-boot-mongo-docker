@@ -21,7 +21,7 @@ services:
     - Docker_Production
 networks:
   springcustom:
-    external: true
+    driver: bridge
 volumes:
   Docker_Production:
     external: true

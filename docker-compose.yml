@@ -1,7 +1,7 @@
 version: "3"
 services:
   springapp:
-    image: buntydocker96/springboot
+    image: buntydocker96/springboot:buildnumber
     ports:
     - 9090:8080
     environment:

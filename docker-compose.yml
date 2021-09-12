@@ -21,7 +21,7 @@ services:
     - Docker_Production
 networks:
   springcustom:
-    driver: bridge
+    external: true
 volumes:
   Docker_Production:
-    driver: rexray/ebs
+    external: true

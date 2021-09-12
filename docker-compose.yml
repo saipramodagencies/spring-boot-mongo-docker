@@ -18,7 +18,7 @@ services:
     networks:
     - springcustom
     volumes:
-    - Docker_Production
+    - Docker_Production:/data/db
 networks:
   springcustom:
     driver: bridge
